@@ -1,3 +1,88 @@
-body {
-    color: rgb(14, 14, 190);
-}
+:root {
+    --lt-accent: #7B73FF;
+    --accent: #6C63FF;
+    --base: #FBFAFF;
+    --lt-primary: #c5c4cf;
+    --primary: #797884;
+    --dk-primary: #34333f;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: var(--base);
+    line-height: 1.4;
+  }
+  nav, footer {
+    background-color: var(--accent);
+    color: var(--base);
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav {
+    justify-content: space-around;
+  }
+  nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  nav a:link, nav a:visited {
+    color: var(--base);
+  }
+  nav a:hover, nav a:active {
+    color: var(--lt-primary);
+  }
+  main {
+    max-width: 144rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: calc(100vh - 12rem)
+  }
+  h1 {
+    font-weight: 100;
+    font-size: 8rem;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    color: var(--primary);
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 4rem;
+    color: var(--primary);
+  }
+  h2 > span {
+    font-weight: 800;
+    color: var(--accent);
+  }
+  section a {
+    display: block;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-top: 3rem;
+    text-align: right;
+  }
+  section a:link, section a:visited {
+    color: var(--accent);
+  }
+  section a:hover, section a:active {
+    color: var(--lt-accent);
+  }
+  @media screen and (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+    section {
+      order: -1;
+      margin-bottom: 2em;
+    }
+    figure {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
